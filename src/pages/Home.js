@@ -13,7 +13,7 @@ function Home() {
   const [selectedCategory, setSelectedCategoty] = useState("burger");
 
   const getCategorys = () => {
-    axios.get('/api/category').then((res) => {
+    axios.get('https://pos-app-csk0.onrender.com/api/category').then((res) => {
       setCategory(res.data)
     }).catch((error) => {
       console.log(error)
@@ -21,7 +21,7 @@ function Home() {
   }
 
   const getProducts = () => {
-    axios.get('/api/products').then((res) => {
+    axios.get('https://pos-app-csk0.onrender.com/api/products').then((res) => {
       setProducts(res.data)
     }).catch((error) => {
       console.log(error)
