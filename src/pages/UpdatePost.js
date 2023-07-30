@@ -28,7 +28,7 @@ function UpdatePost(props) {
 
 
   const getCategory = () => {
-    axios.get('/api/category').then((res) => {
+    axios.get('https://pos-app-csk0.onrender.com/api/category').then((res) => {
       setCategorys(res.data)
 
     }).catch((error) => {
@@ -39,14 +39,14 @@ function UpdatePost(props) {
 
   const updateEmployee = async e => {
     e.preventDefault();
-    await axios.put(`/api/products/${id}`, user);
+    await axios.put(`https://pos-app-csk0.onrender.com/api/products/${id}`, user);
     history.push("/products");
   };
 
 
   useEffect(() => {
     axios
-      .get(`/api/products/${id}`)
+      .get(`https://pos-app-csk0.onrender.com/api/products/${id}`)
 
       .then(response => {
         // const { name, price, category, image } = response.data;
