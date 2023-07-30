@@ -157,12 +157,12 @@ body {
 .categorys:hover{
   background-color: orange;
 }
-.imageItems{
+/* .imageItems{
   width: 50%;
   height: 30px;
   margin-top: 5px;
   margin-left: 25%;
-}
+} */
 
 
 .ctgName{
