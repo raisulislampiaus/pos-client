@@ -290,7 +290,7 @@ function Products() {
             <input
               type="file"
               id="image"
-              accept=".jpg"
+           
               onChange={event => {
                 const file = event.target.files[0];
                 setImage(file);
