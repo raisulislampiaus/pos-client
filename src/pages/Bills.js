@@ -25,7 +25,7 @@ function Bills() {
   const getAllBills = () => {
 
     axios
-      .get("/api/bills/get-all-bills")
+      .get("https://pos-app-csk0.onrender.com/api/bills/get-all-bills")
       .then((response) => {
 
         const data = response.data
