@@ -82,7 +82,7 @@ function CartPage() {
 
         }
         axios
-            .post("/api/bills/charge-bill", reqObject)
+            .post("https://pos-app-csk0.onrender.com/api/bills/charge-bill", reqObject)
             .then(() => {
                 message.success("Bill Charged Successfully");
                 history.push("/bills");
