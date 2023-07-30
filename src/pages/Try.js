@@ -13,7 +13,7 @@ function Try() {
 
   useEffect(()=>{
 
-      axios.get('/api/products/' , {postid : params._id}).then(res=>{
+      axios.get('https://pos-app-csk0.onrender.com/api/products/' , {postid : params._id}).then(res=>{
 
           console.log(res.data[0])
           const postdata = res.data[0]
