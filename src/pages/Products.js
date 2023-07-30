@@ -26,7 +26,7 @@ function Products() {
     data.append("category", category);
     data.append("image", image);
 
-    axios.post("/api/products", data)
+    axios.post("https://pos-app-csk0.onrender.com/api/products", data)
       .then(res => {
         message.success('products added Successfully')
         setIsModalOpen(false)
@@ -51,14 +51,14 @@ function Products() {
 
 
   const getProducts = () => {
-    axios.get('/api/products').then((res) => {
+    axios.get('https://pos-app-csk0.onrender.com/api/products').then((res) => {
       setProducts(res.data)
     }).catch((error) => {
       console.log(error)
     })
   }
   const getCategory = () => {
-    axios.get('/api/category').then((res) => {
+    axios.get('https://pos-app-csk0.onrender.com/api/category').then((res) => {
       setCategorys(res.data)
 
     }).catch((error) => {
@@ -71,7 +71,7 @@ function Products() {
   const deletePost = (id) => {
     console.log(id);
     axios
-      .delete(`/api/products/${id}`)
+      .delete(`https://pos-app-csk0.onrender.com/api/products/${id}`)
       .then((result) => {
         message.success('products deleted Successfully')
         getProducts();
