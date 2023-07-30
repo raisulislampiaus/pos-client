@@ -13,7 +13,7 @@ function Category() {
   const handleShow = () => setShow(true);
 
   const getProducts = () => {
-    axios.get('/api/category').then((res) => {
+    axios.get('https://pos-app-csk0.onrender.com/api/category').then((res) => {
       setProducts(res.data)
     }).catch((error) => {
       console.log(error)
@@ -22,7 +22,7 @@ function Category() {
   const deletePost = (id) => {
     console.log(id);
     axios
-      .delete(`/api/category/${id}`)
+      .delete(`https://pos-app-csk0.onrender.com/api/category/${id}`)
       .then((result) => {
         message.success('category deleted Successfully')
         getProducts();
